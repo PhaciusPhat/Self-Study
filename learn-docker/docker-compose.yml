@@ -1,0 +1,16 @@
+version: '3'
+services:
+  test-service:
+    build: ./test-service
+    volumes:
+      - ./test-service:/usr/src/app
+    ports:
+      - 2333:2222
+  views:
+    image: nginx:alpine
+    volumes:
+      - ./views:/usr/share/nginx/html
+    ports:
+      - 2444:80
+    depends_on:
+      - test-service
