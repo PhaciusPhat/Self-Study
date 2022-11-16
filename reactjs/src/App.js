@@ -1,12 +1,14 @@
-import logo from "./logo.svg";
-import "./App.css";
-import LifeCycleWithClass from "./lifecycleWithClass/LifeCycleWithClass.jsx";
-import LifeCycleWithFunc from './lifecycleWithFunc/LifeCycleWithFunc';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { routers } from './utils/routers';
 
 function App() {
-  return <div className="App">
-    <LifeCycleWithFunc/>
-  </div>;
+  return (
+    <BrowserRouter className="App">
+      <Routes>
+        {routers.map((route, index) => <Route key={index} path={route.path} element={route.element}></Route>)}
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
 export default App;

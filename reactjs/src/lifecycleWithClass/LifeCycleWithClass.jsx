@@ -1,6 +1,6 @@
 import React, { PureComponent } from "react";
 
-export default class File extends PureComponent {
+export default class LifeCycleWithClass extends PureComponent {
   constructor(props) {
     super(props);
     this.state = { date: new Date() };
@@ -10,23 +10,29 @@ export default class File extends PureComponent {
     console.log("component did mount");
     this.timerID = setInterval(() => {
       this.tick();
-      console.log("hello");
     }, 1000);
   }
 
   componentWillUnmount() {
     console.log("component will unmount");
-    // clearInterval(this.timerID);
+    clearInterval(this.timerID);
   }
 
   componentDidUpdate(prevProps, prevState, snapshot) {
-    // console.log(prevState)
+    console.log(prevState);
   }
 
-  //   static getDerivedStateFromProps(props, state){
-  //     console.log(props)
-  //     console.log(state)
-  //   }
+  // static getDerivedStateFromProps(props, state) {
+  //   console.log("getDerivedStateFromProps");
+  // }
+
+  // shouldComponentUpdate(nextProps, nextState){
+  //   return true;
+  // }
+
+  // getSnapshotBeforeUpdate(prevProps, prevState){
+  //   return null;
+  // }
 
   tick() {
     this.setState({
