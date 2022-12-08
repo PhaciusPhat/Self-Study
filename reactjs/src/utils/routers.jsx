@@ -7,6 +7,8 @@ import OptimizeHooks from "../optimizeHooks/OptimizeHooks";
 import ReduxCore from "../redux-core";
 import ReduxThunk from "../redux-thunk";
 import ReduxToolkit from "./../redux-toolkit";
+import ErrorBoundariesCore from "../error-boundary-core/index.jsx";
+import ErrorBoundaryWithPackageNPM from './../error-boundary-with-package/index';
 
 export const routers = [
   { path: "", element: <h1>React</h1> },
@@ -19,4 +21,6 @@ export const routers = [
   { path: "/custom-hook", element: <CustomHook /> },
   { path: "/redux-thunk", element: <ReduxThunk /> },
   { path: "/redux-saga", element: <ReduxSaga /> },
+  { path: "/error-boundary-core", element: <ErrorBoundariesCore /> },
+  { path: "/error-boundary-package", element: <ErrorBoundaryWithPackageNPM /> },
 ];
