@@ -1,0 +1,19 @@
+# make a file called Docker 
+FROM node:19-alpine3.15
+
+# sets working directory
+WORKDIR /usr/src/app
+
+# copy the package
+COPY package*.json ./
+
+# runs npm install
+RUN npm i
+
+COPY . .
+
+# exposes port 3000
+EXPOSE 3000
+
+# runs the comand npm start
+CMD ["npm", "start"]
