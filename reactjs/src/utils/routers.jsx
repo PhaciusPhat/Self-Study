@@ -1,5 +1,5 @@
 import ReduxSaga from "../redux-saga";
-import CustomHook from "../CustomHook";
+import CustomHook from "../customHook";
 import HighOrderComponent from "../HOC/HighOrderComponent";
 import LifeCycleWithClass from "../lifecycleWithClass/LifeCycleWithClass";
 import LifeCycleWithFunc from "../lifecycleWithFunc/LifeCycleWithFunc";
@@ -8,7 +8,8 @@ import ReduxCore from "../redux-core";
 import ReduxThunk from "../redux-thunk";
 import ReduxToolkit from "./../redux-toolkit";
 import ErrorBoundariesCore from "../error-boundary-core/index.jsx";
-import ErrorBoundaryWithPackageNPM from './../error-boundary-with-package/index';
+import ErrorBoundaryWithPackageNPM from "./../error-boundary-with-package/index";
+import ReactPortal from "../reactPortal/index";
 
 export const routers = [
   { path: "", element: <h1>React</h1> },
@@ -23,4 +24,5 @@ export const routers = [
   { path: "/redux-saga", element: <ReduxSaga /> },
   { path: "/error-boundary-core", element: <ErrorBoundariesCore /> },
   { path: "/error-boundary-package", element: <ErrorBoundaryWithPackageNPM /> },
+  { path: "/react-portal", element: <ReactPortal /> },
 ];
