@@ -1,6 +1,6 @@
 package Behavioral.Template;
 
-public abstract class TemplatePage {
+public class TemplatePage {
     public void Header() {
         System.out.println("Template Header");
     }
